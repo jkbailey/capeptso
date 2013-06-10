@@ -1,0 +1,54 @@
+<div class="bc">
+    <a href="/directory">Directory Home</a> >
+    Search
+</div>
+<h3 class="subheader"><b>Cape Online</b><br />search directory</h3>
+<div class="subsideicon"><img src="/images/cape_icon_community.png" /></div>
+<div class="maincopy"><br />
+<form method="get" action="/directory/search" class="searchbox">
+Search the online directory of parents, teachers, and students<br />
+<input type="text" name="s" size="70" value="<?=$this->term?>" /> <input type="submit" value="Search" />
+</form>
+<br /><br />
+<?
+$res = '';
+foreach ($this->results AS $f)
+{
+    $res .= sprintf('<a href="/directory/viewfamily/id/%s">%s</a> - %s<br />%s %s, %s %s<br />',
+        $f['authid'],
+        $f['lastname'],
+        $f['phone'],
+        $f['street'],
+        $f['city'],
+        $f['state'],
+        $f['zip']
+    );
+        
+
+    if ( $f['students'] ) {
+        $res .= '<ul>';
+        
+        foreach ($f['students'] AS $s)
+        {
+            
+            $res .= sprintf('<li>%s %s - Grade: %s - Teacher: %s</li>',
+                $s['fname'],
+                $s['lname'],
+                $s['grade'],
+                $s['teacher']
+            );
+            
+        }
+        
+        $res .= '</ul>';
+        
+    }
+    
+    $res .= '<br />';
+    
+}
+
+$rest = str_replace($this->term, '<b>'.$this->term.'</b>', $res);
+print $rest;
+?>
+</div>

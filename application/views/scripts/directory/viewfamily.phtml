@@ -1,0 +1,57 @@
+<script>
+$(function(){
+    $('#print_fam').click(function(){
+        if (window.print) {
+            window.print();
+        }
+    })
+});
+</script>
+<div class="bc">
+    <a href="/directory">Directory Home</a> >
+    View Family
+</div>
+<h3 class="subheader"><b><?=$this->family['lastname']?></b><br />family profile</h3>
+<div class="subsideicon"><img src="/images/cape_icon_community.png" /></div>
+<div class="maincopy">
+<a id="print_fam" class="btn">Print</a>
+<br />
+<h4>Family Information</h4>
+<div class="row"><label>Last Name:</label> <?=$this->family['lastname']?></div>
+<div class="row"><label>phone number:</label> <?=$this->family['phone']?></div>
+<div class="row"><label>address:</label> <?=$this->family['street']?></div>
+<div class="row"><label></label>
+<?=$this->family['city']?>, 
+<?=$this->family['state']?> 
+<?=$this->family['zip']?>
+</div>
+<h4>Parent Information</h4>
+<div class="row">
+    <?=$this->family['parent1fname']?> <?=$this->family['parent1lname']?>
+    <? if ($this->family['parent1email']) { ?> - 
+        <a href="mailto:<?=$this->family['parent1email']?>"><?=$this->family['parent1email']?></a> - 
+        <?=$this->family['parent1phone']?>
+    <? } ?>
+</div>
+<div class="row">
+    <?=$this->family['parent2fname']?> <?=$this->family['parent2lname']?>
+    <? if ($this->family['parent2email']) { ?> - 
+        <a href="mailto:<?=$this->family['parent2email']?>"><?=$this->family['parent2email']?></a> - 
+        <?=$this->family['parent2phone']?>
+    <? } ?>
+</div>
+<br />
+<h4>Students</h4>
+<?
+foreach ($this->students as $student)
+{
+    printf('<div class="row">%s %s</div><div class="row"><label>Teacher:</label> %s</div><div class="row"><label>Grade:</label> %s</div><br />',
+        $student->fname,
+        $student->lname,
+        $student->teacher,
+        $student->grade
+    );
+}
+?>
+<br />
+</div>

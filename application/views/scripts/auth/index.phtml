@@ -1,0 +1,23 @@
+<h3 class="subheader"><b>Cape Online</b><br />login</h3>
+<div class="subsideicon"><img src="/images/cape_icon_community.png" /></div>
+<div class="maincopy">
+<?php
+if ($this->message) {
+    print $this->message . '<br /><br />';
+} else {
+?>
+    <br />First time here? <a href="/auth/register" class="create_account btn">Create an account</a>
+    
+<br />
+<h4>or</h4>
+<?
+}
+?>
+<br />
+<form method="post" action="/auth">
+<div class="row"><label>username:</label> <input type="text" name="username" /></div>
+<div class="row"><label>password:</label> <input type="password" name="password" /></div>
+<div class="row"><input type="submit" value="Login" class="btn" /></div>
+</form>
+
+</div>

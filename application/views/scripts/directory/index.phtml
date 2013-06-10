@@ -1,0 +1,52 @@
+<div class="bc">
+    Directory Home
+</div>
+<h3 class="subheader"><b>Cape Online</b><br />family profile</h3>
+<div class="subsideicon"><img src="/images/cape_icon_community.png" /></div>
+<div class="maincopy"><br />
+<form method="get" action="/directory/search" class="searchbox">
+Search the online directory of parents, teachers, and students<br />
+<input type="text" name="s" size="70" value="<?=$this->term?>" /> <input type="submit" value="Search" />
+</form>
+<br /><br />
+<h4>Family Information - <a href="/directory/editfamily">edit</a></h4>
+<div class="row"><label>Last Name:</label> <?=$this->family['lastname']?></div>
+<div class="row"><label>Phone Number:</label> <?=$this->family['phone']?></div>
+<div class="row"><label>Address:</label> <?=$this->family['street']?></div>
+<div class="row"><label></label>
+<?=$this->family['city']?>, 
+<?=$this->family['state']?> 
+<?=$this->family['zip']?>
+</div>
+<h4>Parent Information</h4>
+<div class="row">
+    <?=$this->family['parent1fname']?> <?=$this->family['parent1lname']?>
+    <? if ($this->family['parent1email']) { ?> - 
+        <a href="mailto:<?=$this->family['parent1email']?>"><?=$this->family['parent1email']?></a> - 
+        <?=$this->family['parent1phone']?>
+    <? } ?>
+</div>
+<div class="row">
+    <?=$this->family['parent2fname']?> <?=$this->family['parent2lname']?>
+    <? if ($this->family['parent2email']) { ?> - 
+        <a href="mailto:<?=$this->family['parent2email']?>"><?=$this->family['parent2email']?></a> - 
+        <?=$this->family['parent2phone']?>
+    <? } ?>
+</div>
+<br />
+<h4>Students</h4>
+<?
+foreach ($this->students as $student)
+{
+    printf('<div class="row">%s %s - <a href="/directory/student/id/%s">edit</a></div><div class="row"><label>Teacher:</label> %s</div><div class="row"><label>Grade:</label> %s</div><br />',
+        $student->fname,
+        $student->lname,
+        $student->id,
+        $student->teacher,
+        $student->grade
+    );
+}
+?>
+<a href="/directory/student">Add a student</a><br />
+<br />
+</div>

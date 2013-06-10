@@ -1,0 +1,16 @@
+<h3 class="subheader"><?=( $this->message ? '<b>Congratulations</b><br />check your e-mail' : '<b>Cape Online</b><br />create an account' )?></h3>
+<div class="subsideicon"><img src="/images/cape_icon_community.png" /></div>
+<div class="maincopy">
+<?php
+if ( $this->message ) {
+    print $this->message . '<br /><br /><br />';
+}
+?>
+<form method="post" action="/auth/register">
+    <div class="row"><label>cape auth key:</label> <input type="text" name="regkey" /></div>
+    <div class="row"><label>username:</label> <input type="text" name="username" /></div>
+    <div class="row"><label>password:</label> <input type="password" name="password" /></div>
+    <div class="row"><label>e-mail:</label> <input type="text" name="email" /></div>
+    <div class="row"><input type="submit" value="Register" class="btn" /></div>
+</form>
+</div>

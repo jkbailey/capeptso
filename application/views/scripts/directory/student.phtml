@@ -1,0 +1,68 @@
+<div class="bc">
+    <a href="/directory">Directory Home</a> >
+    Edit Student
+</div>
+<h3 class="subheader"><b>Cape Online</b><br />edit student</h3>
+<div class="subsideicon"><img src="/images/cape_icon_community.png" /></div>
+<div class="maincopy">
+<form method="post" action="/directory/student">
+<? if ($this->student['id']) { ?>
+<input type="hidden" name="id" value="<?=$this->student['id']?>" />
+<? } ?>
+<h4>Student Information</h4>
+<div class="row"><label>First Name:</label> <input type="text" name="fname" value="<?=$this->student['fname']?>" /></div>
+<div class="row"><label>Last Name:</label> <input type="text" name="lname" value="<?=$this->student['lname']?>" /></div>
+<div class="row">
+    <label>Teacher:</label> 
+
+    <select name="teacher" id="teacher">
+        <optgroup label="-- K --">
+            <option value="Bryant" <?=($this->student['teacher'] == 'Bryant' ? 'selected' : '')?>>Bryant</option>
+            <option value="White" <?=($this->student['teacher'] == 'White' ? 'selected' : '')?>>White</option>
+            <option value="Sage" <?=($this->student['teacher'] == 'Sage' ? 'selected' : '')?>>Sage</option>
+        </optgroup>
+        <optgroup label="-- 1 --">
+            <option value="Raives" <?=($this->student['teacher'] == 'Raives' ? 'selected' : '')?>>Raives</option>
+            <option value="Curro" <?=($this->student['teacher'] == 'Curro' ? 'selected' : '')?>>Curro</option>
+            <option value="Ortgies" <?=($this->student['teacher'] == 'Ortgies' ? 'selected' : '')?>>Ortgies</option>
+        </optgroup>
+        <optgroup label="-- 2 --">
+            <option value="Sorensen" <?=($this->student['teacher'] == 'Sorensen' ? 'selected' : '')?>>Sorensen</option>
+            <option value="Jacobs" <?=($this->student['teacher'] == 'Jacobs' ? 'selected' : '')?>>Jacobs</option>
+            <option value="Kaio" <?=($this->student['teacher'] == 'Kaio' ? 'selected' : '')?>>Kaio</option>
+        </optgroup>
+        <optgroup label="-- 3 --">
+            <option value="Greminger" <?=($this->student['teacher'] == 'Greminger' ? 'selected' : '')?>>Greminger</option>
+            <option value="Foster" <?=($this->student['teacher'] == 'Foster' ? 'selected' : '')?>>Foster</option>
+            <option value="Scheimer" <?=($this->student['teacher'] == 'Scheimer' ? 'selected' : '')?>>Scheimer</option>
+        </optgroup>
+        <optgroup label="-- 4 --">
+            <option value="Roberts" <?=($this->student['teacher'] == 'Roberts' ? 'selected' : '')?>>Roberts</option>
+            <option value="Forbes" <?=($this->student['teacher'] == 'Forbes' ? 'selected' : '')?>>Forbes</option>
+        </optgroup>
+        <optgroup label="-- 5 --">
+            <option value="Liddell" <?=($this->student['teacher'] == 'Liddell' ? 'selected' : '')?>>Liddell</option>
+            <option value="McCrory" <?=($this->student['teacher'] == 'McCrory' ? 'selected' : '')?>>McCrory</option>
+        </optgroup>
+        <optgroup label="-- 6 --">
+            <option value="Keefer" <?=($this->student['teacher'] == 'Keefer' ? 'selected' : '')?>>Keefer</option>
+            <option value="Schlemmer" <?=($this->student['teacher'] == 'Schlemmer' ? 'selected' : '')?>>Schlemmer</option>
+        </optgroup>
+        <optgroup label="-- 7 --">
+            <option value="Brown" <?=($this->student['teacher'] == 'Brown' ? 'selected' : '')?>>Brown</option>
+            <option value="Moore" <?=($this->student['teacher'] == 'Moore' ? 'selected' : '')?>>Moore</option>
+        </optgroup>
+        <optgroup label="-- 8 --">
+            <option value="Kavon" <?=($this->student['teacher'] == 'Kavon' ? 'selected' : '')?>>Kavon</option>
+            <option value="Peak" <?=($this->student['teacher'] == 'Peak' ? 'selected' : '')?>>Peak</option>
+        </optgroup>
+    </select>
+
+<!--<input type="text" name="teacher" value="<?=$this->student['teacher']?>" />-->
+
+</div>
+<div class="row"><label>Grade:</label> <input type="text" name="grade" value="<?=$this->student['grade']?>" /></div>
+<div class="row"><input type="submit" value="Save" /></div>
+</form>
+<br />
+</div>

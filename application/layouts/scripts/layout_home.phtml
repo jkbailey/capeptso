@@ -1,0 +1,71 @@
+<?php echo $this->doctype() ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	
+	<?=$this->render('head.phtml')?>
+	
+	<title>CAPE</title>
+	
+</head>
+
+<body>
+
+	<div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    
+	<?=$this->render('header.phtml')?>
+	<table>
+		<tr>
+			<td class="leftcol">
+				<?=$this->render('nav.phtml')?>
+				<div class="fbookcont">
+				    <div class="fb-like-box" data-href="http://www.facebook.com/CAPECharter" data-width="300" data-height="400" data-show-faces="true" data-border-color="#333333" data-stream="true" data-header="true"></div>
+				</div>
+			</td>
+			<td class="rightcol">
+    			<?php echo $this->layout()->content ?>
+    			
+				<div class="family_home">
+					<h3><b>Family Log In</b><br />search our family directory</h3>
+					<a href="/auth" class="clickhere"></a>
+				</div>
+				
+                <div class="amazon">
+                    <SCRIPT charset="utf-8" type="text/javascript" src="http://ws.amazon.com/widgets/q?ServiceVersion=20070822&MarketPlace=US&ID=V20070822/US/camaracadeofp-20/8002/bf7e899a-4a1f-419d-b5a7-4f5aad69edf1"> </SCRIPT>
+                      <NOSCRIPT>
+                      <A HREF="http://ws.amazon.com/widgets/q?ServiceVersion=20070822&MarketPlace=US&ID=V20070822%2FUS%2Fcamaracadeofp-20%2F8002%2Fbf7e899a-4a1f-419d-b5a7-4f5aad69edf1&Operation=NoScript" target="_blank">Amazon.com Widgets</A>
+                    </NOSCRIPT>
+                </div>
+			</td>
+		</tr>
+	</table>
+	<div class="hr_full"></div>
+	<div class="bottom_linkbar">
+		<div class="linkbar_bod">
+			<h3>PTSO<br />Board</h3>
+			<img class="linkbar_sideicon" src="/images/cape_icon_justice.png" />
+			<a href="/boardmembers" class="clickhere"></a>
+		</div>
+		<div class="linkbar_bod">
+			<h3>Tools</h3>
+			<img class="linkbar_sideicon" src="/images/cape_icon_tools.png" />
+			<a href="/tools" class="clickhere"></a>
+		</div>
+		<div class="linkbar_bod">
+			<h3>Fundraising</h3>
+			<img class="linkbar_sideicon" src="/images/cape_icon_moneytree.png" height="120" />
+			<a href="/fundraising" class="clickhere"></a>
+		</div>
+	</div>
+	<?=$this->render('footer.phtml')?>
+	
+</body>
+
+</html>

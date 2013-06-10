@@ -1,0 +1,327 @@
+@CHARSET "UTF-8";
+
+/* 805 STANDARDS */
+body {
+	margin: 0px;
+	line-height: 20px;
+	color: #FFF;
+}
+a {
+	text-decoration: none;
+	color: #9BF;
+}
+a:hover {
+	text-decoration: underline;
+}
+ul {
+	margin: 0px;
+	padding-left: 15px;
+}
+.clear {
+	clear: both;
+}
+textarea {
+	resize: vertical;
+}
+.fr {
+	float: right;
+}
+/* END 805 STANDARDS */
+
+/* MASTER LAYOUT */
+body {
+	background: #222 url(../images/bg.jpg) 50% 0 no-repeat;
+	font-family: arial;
+}
+.header {
+	background: url(../images/cape_header.png) no-repeat;
+	width: 1048px;
+	height: 253px;
+	margin: 0 auto 20px auto;
+	position: relative;
+	color: #FFF;
+	left: 8px;
+}
+.header h1 {
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+	font-size: 39px;
+	line-height: 40px;
+	position: absolute;
+	top: 70px;
+	left: 435px;
+}
+.header h1 b {
+	font-size: 47px;
+}
+.header .slogan {
+	position: absolute;
+	top: 170px;
+	left: 420px;
+	font-size: 24px;
+	letter-spacing: 3px;
+	text-shadow: 0px -2px 2px #550C24;
+}
+.header .logged {
+    position: absolute;
+    width: 500px;
+    text-align: right;
+    top: 232px;
+    left: 500px;
+}
+.bc {
+    margin-bottom: 20px;
+}
+.fbookcont {
+    width: 300px;
+    background: #EEE;
+    height: 400px;
+    margin: auto;
+}
+.hr_full {
+	background: url(../images/cape_hr_1048.png) no-repeat;
+	height: 8px;
+	width: 1048px;
+	margin: auto;
+	clear: both;
+}
+.hr_med {
+	background: url(../images/cape_hr_667.png) no-repeat;
+	height: 10px;
+	width: 667px;
+	margin: 15px auto;
+	clear: both;
+}
+table {
+	width: 1048px;
+	margin: auto;
+}
+table td {
+	vertical-align: top;
+}
+.leftcol {
+	width: 350px;
+}
+.leftcol .nav ul {
+	list-style-type: none;
+	font-size: 17px;
+}
+.leftcol .nav ul li {
+	padding: 7px;
+}
+.leftcol .nav ul li a {
+	color: #FFF;
+}
+.family {
+	background: url(../images/cape_icon_family.png) 200px 85px no-repeat;
+	height: 200px;
+	margin: 30px 0 0 20px;
+}
+.family_home {
+	background: url(../images/cape_icon_family.png) 200px 85px no-repeat;
+	height: 200px;
+	width: 320px;
+	float: left;
+}
+.amazon {
+    float: left;
+    margin: 20px 0 0 70px;
+    width: 200px;
+    height: 160px;
+}
+h3 {
+	font-size: 37px;
+	font-weight: normal;
+	line-height: 35px;
+	color: #FFF;
+	margin: 0;
+}
+h3 b {
+	font-size: 47px;
+}
+.home_link_logo {
+    width: 410px;
+    height: 260px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.home_fundraising {
+	float:left;
+	width: 323px;
+}
+.home_family {
+	float: left;
+	margin-left: 20px;
+	width: 323px;
+}
+.home_sec_icon {
+	margin-top: -15px;
+}
+.clickhere {
+	background: url(../images/cape_icon_clickhere.png) no-repeat;
+	width: 150px;
+	height: 50px;
+	display: block;
+}
+.family .clickhere {
+	margin-top: 20px;
+}
+.rightcol {
+	vertical-align: top;
+	padding-top: 10px;
+	position: relative;
+}
+.home_create {
+    position: absolute;
+    width: 250px;
+    height: 60px;
+    top: 280px;
+    left: 414px;
+    text-align: right;
+}
+h3.subheader {
+	float: left;
+	/*width: 350px;*/
+	width: 430px;
+	margin-bottom: 14px;
+}
+.subsideicon {
+	float: left;
+	width: 250px;
+	/*width: 200px;*/
+	margin-top: -7px;
+}
+.copypic {
+	margin-bottom: 15px;
+}
+.maincopy {
+	clear: both;
+	color: #FFF;
+}
+.bottom_linkbar {
+	width: 1048px;
+	margin: 20px auto;
+}
+.bottom_linkbar h3 {
+	font-weight: bold;
+	float: left;
+}
+.linkbar_bod {
+	float: left;
+	position: relative;
+	height: 150px;
+	margin: 0 38px;
+}
+.linkbar_sideicon {
+	float: right;
+	margin-left: 20px;
+	margin-top: -7px;
+}
+.bottom_linkbar .clickhere {
+	position: absolute;
+	top: 80px;
+	left: 0;
+}
+.footer {
+	width: 969px;
+	margin: 20px auto;
+}
+.footer_col {
+	width: 323px;
+	float: left;
+	font-size: 12px;
+}
+.footer_col ul {
+	list-style-type: none;
+}
+.deisngedby {
+	width: 1048px;
+	margin: 20px auto;
+	text-align: center;
+}
+.row {
+    margin-bottom: 7px;
+}
+label {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    width: 110px;
+    font-weight: bold;
+    color: #DDD;
+    font-size: 14px;
+}
+h4 {
+    color: #CCC;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #CCC;
+}
+.searchbox {
+    padding: 10px;
+    border: 1px solid #000;
+    background: #333;
+    border-radius: 5px;
+}
+.create_account {
+    width: 200px;
+    margin-top: 10px;
+}
+#print_fam {
+    float: right;
+    width: 100px;
+    height: 15px;
+}
+.btn {
+    line-height: 16px;
+    text-shadow: 0 -1px 0 #46A;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 5px;
+    border: 1px solid #469;
+    border-bottom: 1px solid #35B;
+    -webkit-box-shadow: inset 0 0 1px rgba(255, 255, 255, .4),0 0 4px rgba(255, 255, 255, .5),inset 0 1px 0 rgba(255, 255, 255, .5),inset 0 -1px 0 rgba(0, 0, 0, .2);
+    -moz-box-shadow: inset 0 0 1px rgba(255, 255, 255, .4),0 0 4px rgba(255, 255, 255, .5),inset 0 1px 0 rgba(255, 255, 255, .5),inset 0 -1px 0 rgba(0, 0, 0, .2);
+    box-shadow: inset 0 0 1px rgba(255, 255, 255, .4),0 0 4px rgba(255, 255, 255, .5),inset 0 1px 0 rgba(255, 255, 255, .5),inset 0 -1px 0 rgba(0, 0, 0, .2);
+    padding: 7px;
+    display: block;
+    background: #9BF;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9BF), color-stop(100%, #57B));
+    background: -webkit-linear-gradient(top, #9BF, #57B);
+    background: -moz-linear-gradient(top, #9BF, #57B);
+    background: -ms-linear-gradient(top, #9BF, #57B);
+    background: -o-linear-gradient(top, #9BF, #57B);
+    background: linear-gradient(top, #9BF, #57B);
+}
+.btn:hover {
+    text-decoration: none;
+    cursor: pointer;
+    background: #ACF;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ACF), color-stop(100%, #68C));
+    background: -webkit-linear-gradient(top, #ACF, #68C);
+    background: -moz-linear-gradient(top, #ACF, #68C);
+    background: -ms-linear-gradient(top, #ACF, #68C);
+    background: -o-linear-gradient(top, #ACF, #68C);
+    background: linear-gradient(top, #ACF, #68C);
+}
+.btn:active {
+    padding-top: 8px;
+    padding-bottom: 6px;
+	background: #68C;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #248), color-stop(100%, #68C));
+    background: -webkit-linear-gradient(top, #248, #68C);
+    background: -moz-linear-gradient(top, #248, #68C);
+    background: -ms-linear-gradient(top, #248, #68C);
+    background: -o-linear-gradient(top, #248, #68C);
+    background: linear-gradient(top, #248, #68C);
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .1),0 0 0 1px rgba(255, 255, 255, .08),inset 0 5px 4px -4px rgba(0, 0, 0, .2),inset 0 0 20px rgba(0, 0, 0, .8);
+    -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .1),0 0 0 1px rgba(255, 255, 255, .08),inset 0 5px 4px -4px rgba(0, 0, 0, .2),inset 0 0 20px rgba(0, 0, 0, .8);
+    -ms-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .1),0 0 0 1px rgba(255, 255, 255, .08),inset 0 5px 4px -4px rgba(0, 0, 0, .2),inset 0 0 20px rgba(0, 0, 0, .8);
+    -o-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .1),0 0 0 1px rgba(255, 255, 255, .08),inset 0 5px 4px -4px rgba(0, 0, 0, .2),inset 0 0 20px rgba(0, 0, 0, .8);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .1),0 0 0 1px rgba(255, 255, 255, .08),inset 0 5px 4px -4px rgba(0, 0, 0, .2),inset 0 0 20px rgba(0, 0, 0, .8);
+}

@@ -1,0 +1,24 @@
+<?php
+if ($this->success) {
+?>
+    <h3 class="subheader"><b>Your Account</b><br />has been created!</h3>
+    <div class="subsideicon"><img src="/images/cape_icon_community.png" /></div>
+    <div class="maincopy">
+    
+        <form method="post" action="/auth">
+            <div class="row"><label>username:</label> <input type="text" name="username" /></div>
+            <div class="row"><label>password:</label> <input type="password" name="password" /></div>
+            <div class="row"><input type="submit" value="Login" /></div>
+        </form>
+<?
+} else {
+?>
+    <h3 class="subheader"><b>Cape Online</b><br />something went wrong</h3>
+    <div class="subsideicon"><img src="/images/cape_icon_community.png" /></div>
+    <div class="maincopy">
+        We're sorry, something went wrong. Either, your account has been created and you need to <a href="/auth">login</a>, or you need to try creating your account again.<br /><br />
+        <a href="/auth/register">Create an account</a>
+<?
+}
+?>
+</div>

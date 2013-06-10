@@ -1,0 +1,19 @@
+<div class="header">
+    <a href="/" class="home_link_logo"> </a>
+	<h1><b>Camarillo Academy</b><br /> of Progressive Education</h1>
+	<div class="slogan">Parent-Teacher-Student-Organization</div>
+	<div class="logged">
+    	<?
+    	if ($this->username) {
+        	?>
+        	Welcome <?=$this->username?> | <a href="/directory">family</a> | <a href="/auth/logout">logout</a>
+        	<?
+    	} else {
+        	?>
+        	<a href="/auth/register">Create an account</a> | <a href="/auth">Login</a>
+        	<?
+    	}
+    	?>
+	</div>
+</div>
+<div class="hr_full"></div>

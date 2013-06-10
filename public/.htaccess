@@ -1,0 +1,10 @@
+SetEnvIf Host capeptso.org APPLICATION_ENV=production
+SetEnvIf Host www.capeptso.org APPLICATION_ENV=production
+SetEnvIf Host localhost APPLICATION_ENV=staging
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^.*$ index.php [NC,L]

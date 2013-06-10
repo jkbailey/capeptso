@@ -1,0 +1,51 @@
+<?php echo $this->doctype() ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	
+	<?=$this->render('head.phtml')?>
+	
+	<title>CAPE</title>
+	
+</head>
+
+<body>
+    
+	<?=$this->render('header.phtml')?>
+	<table>
+		<tr>
+			<td class="leftcol">
+				<?=$this->render('nav.phtml')?>
+				<div class="family">
+					<h3><b>Family Log In</b><br />search our family directory</h3>
+					<a href="/auth" class="clickhere"></a>
+				</div>
+			</td>
+			<td class="rightcol">
+    			<?php echo $this->layout()->content ?>
+			</td>
+		</tr>
+	</table>
+	<div class="hr_full"></div>
+	<div class="bottom_linkbar">
+		<div class="linkbar_bod">
+			<h3>PTSO<br />Board</h3>
+			<img class="linkbar_sideicon" src="/images/cape_icon_justice.png" />
+			<a href="/boardmembers" class="clickhere"></a>
+		</div>
+		<div class="linkbar_bod">
+			<h3>Tools</h3>
+			<img class="linkbar_sideicon" src="/images/cape_icon_tools.png" />
+			<a href="/tools" class="clickhere"></a>
+		</div>
+		<div class="linkbar_bod">
+			<h3>Fundraising</h3>
+			<img class="linkbar_sideicon" src="/images/cape_icon_moneytree.png" height="120" />
+			<a href="/fundraising" class="clickhere"></a>
+		</div>
+	</div>
+	<?=$this->render('footer.phtml')?>
+	
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<div class="bc">
+    <a href="/directory">Directory Home</a> >
+    Edit Family
+</div>
+<h3 class="subheader"><b>Edit</b><br />your family profile</h3>
+<div class="subsideicon"><img src="/images/cape_icon_community.png" /></div>
+<div class="maincopy"><br />
+<form method="post" action="/directory/editfamily">
+<? if ($this->family['id']) { ?>
+<input type="hidden" name="id" value="<?=$this->family['id']?>" />
+<? } ?>
+<div class="row"><input type="checkbox" name="optout" <? if($this->family['optout']){print 'checked';} ?> /> I do not want my information to appear in search results.</div>
+<h4>Family Information</h4>
+<div class="row"><label>Last Name:</label> <input type="text" name="lastname" value="<?=$this->family['lastname']?>" /></div>
+<div class="row"><label>phone number:</label> <input type="text" name="phone" value="<?=$this->family['phone']?>" /></div>
+<div class="row"><label>address:</label> <input type="text" name="street" value="<?=$this->family['street']?>" size="70" placeholder="Street" /></div>
+<div class="row"><label></label><input type="text" name="city" value="<?=$this->family['city']?>" size="30" placeholder="City" /> 
+<input type="text" name="state" value="<?=$this->family['state']?>" placeholder="State" /> 
+<input type="text" name="zip" value="<?=$this->family['zip']?>" size="10" placeholder="Zip" /></div>
+<h4>Parent 1 Information</h4>
+<div class="row"><label>first name:</label> <input type="text" name="parent1fname" value="<?=$this->family['parent1fname']?>" /></div>
+<div class="row"><label>last name:</label> <input type="text" name="parent1lname" value="<?=$this->family['parent1lname']?>" /></div>
+<div class="row"><label>e-mail:</label> <input type="text" name="parent1email" value="<?=$this->family['parent1email']?>" /></div>
+<div class="row"><label>phone:</label> <input type="text" name="parent1phone" value="<?=$this->family['parent1phone']?>" /></div>
+<h4>Parent 2 Information</h4>
+<div class="row"><label>first name:</label> <input type="text" name="parent2fname" value="<?=$this->family['parent2fname']?>" /></div>
+<div class="row"><label>last name:</label> <input type="text" name="parent2lname" value="<?=$this->family['parent2lname']?>" /></div>
+<div class="row"><label>e-mail:</label> <input type="text" name="parent2email" value="<?=$this->family['parent2email']?>" /></div>
+<div class="row"><label>phone:</label> <input type="text" name="parent2phone" value="<?=$this->family['parent2phone']?>" /></div>
+<div class="row"><input type="submit" value="Save" class="btn" /></div>
+</form>
+<br />
+</div>

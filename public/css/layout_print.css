@@ -1,0 +1,48 @@
+@CHARSET "UTF-8";
+
+body {
+    background: none;
+    font-family: arial;
+}
+.header,
+.leftcol,
+.bc,
+#print_fam,
+.bottom_linkbar,
+.footer {
+    display: none;
+}
+h3.subheader,
+.maincopy,
+h4 {
+    color: #000;
+}
+h3 {
+	font-size: 37px;
+	font-weight: normal;
+	line-height: 35px;
+	margin: 0;
+}
+h3 b {
+	font-size: 47px;
+}
+h3.subheader {
+	float: left;
+	/*width: 350px;*/
+	width: 350px;
+	margin-bottom: 14px;
+}
+.subsideicon {
+	float: left;
+	width: 250px;
+	/*width: 200px;*/
+	margin-top: -7px;
+}
+h4 {
+    clear: both;
+    border-top: 1px solid #000;
+    padding-top: 5px;
+}
+label {
+    display: none;
+}
